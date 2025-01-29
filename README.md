@@ -1,6 +1,8 @@
 # Hi :3
 **I'm ash.**
 
+[Site](https://asboy2035.pages.dev)
+
 I do random stuff, mainly web design and shortcutting, as well as the occasional random Mac app for some specific purpose.
 
 ### Pronouns, etc
