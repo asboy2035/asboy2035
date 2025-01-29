@@ -108,3 +108,7 @@
     };
   };
 })();
+
+window.onload = () => {
+  document.getElementById('scriptBlockMessage').classList.add('hidden');
+};

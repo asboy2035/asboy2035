@@ -9,25 +9,32 @@
   --swirly-04: rgb(172, 189, 255);
 }
 
+@import url('https://fonts.google.com/specimen/Comfortaa');
+
 body {
   display: flex;
-  flex-direction: column;
-  padding: 3rem 1rem;
-  justify-self: center;
-  max-width: 75rem;
-  min-height: 100vh;
-  gap: 1rem;
-
+  align-items: center;
+  justify-content: center;
+  
   background: var(--background-color);
   color: var(--text-color);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Comfortaa, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   user-select: none;
   -webkit-user-select: none;
 }
 
+.contentView {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1rem;
+  justify-self: center;
+  max-width: 70rem;
+  min-height: 100vh;
+  gap: 1rem;
+}
+
 h1, h2, h3, h4, h5, h6, p {
   margin: 0.5rem 0;
-  font-weight: 350;
 }
 
 div {
@@ -46,6 +53,9 @@ div {
   padding: 1.5rem;
   background: var(--foreground-color);
   box-shadow: 0.5rem 0.5rem 3rem rgba(28, 28, 28, 0.2);
+}
+a .card {
+  width: calc(100% - 1.5rem);
 }
 
 .interior {
@@ -66,7 +76,7 @@ header {
   box-shadow: 0.5rem 0.5rem 3rem rgba(28, 28, 28, 0.2);
   padding: 1rem;
   border-radius: 2rem;
-  z-index: 2;
+  z-index: 3;
   backdrop-filter: blur(5rem);
 }
 
@@ -78,6 +88,12 @@ a {
 
 svg {
   color: var(--text-color);
+}
+
+/* Links/Langs */
+.card.vStack.interior.centered > svg {
+  width: 3rem;
+  height: 3rem;
 }
 
 button {
@@ -94,10 +110,10 @@ button {
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
-button:hover {
+button:hover, .avatar:hover {
   transform: scale(1.1);
 }
-button:active {
+button:active, .avatar:active {
   transform: scale(1.05);
 }
 button svg {
@@ -105,6 +121,10 @@ button svg {
 }
 button.transparent > svg {
   width: 1.5rem;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .vStack, .hStack {
@@ -184,6 +204,19 @@ button.transparent > svg {
 
 
 /* Instances */
+.topMask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 4rem;
+
+  background: linear-gradient(to bottom, var(--background-color), transparent);
+  border-radius: 0;
+  z-index: 2;
+}
+
 #links {
   height: fit-content;
   flex-wrap: wrap;
@@ -192,10 +225,10 @@ button.transparent > svg {
 .avatar {
   width: 3rem;
   border-radius: 1rem;
+  transition: 0.2s ease-in-out;
 }
 
 .content {
-  margin-left: 1rem;
   width: calc(100% - 2rem);
   padding: 0;
 }
@@ -214,9 +247,9 @@ button.transparent > svg {
 }
 
 #rotatingGlobe {
-  width: 25rem; 
-  aspect-ratio: 1/1;
   max-width: 100%;
+  max-height: 35rem;
+  aspect-ratio: 1/1;
   cursor: move;
 }
 
@@ -243,7 +276,6 @@ button.transparent > svg {
   }
 
   .content {
-    margin-left: 0.5rem;
     width: calc(100% - 1rem);
   }
 }
