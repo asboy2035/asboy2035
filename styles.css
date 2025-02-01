@@ -295,9 +295,6 @@ button:disabled {
     width: calc(100% - 2rem);
   }
 
-  .grid.tight > .card {
-    width: calc(100% - 2rem);
-  }
   .interior {
     border-radius: 1rem;
     padding: 0.75rem;
