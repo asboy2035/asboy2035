@@ -1,0 +1,105 @@
+/* Styles for apps pages */
+
+.dock {
+  position: fixed;
+  bottom: 1rem;
+  display: flex;
+  padding: 0.25rem;
+  padding-top: 0.75rem;
+  
+  background: var(--foreground-color);
+  border: var(--foreground-color) 0.1rem solid;
+  backdrop-filter: blur(5rem);
+  border-radius: 1.25rem;
+}
+
+.dockApps {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.app {
+  position: relative;
+  height: 4rem;
+  aspect-ratio: 1/1;
+  padding: 0;
+}
+.app > a > img {
+  width: 100%;
+}
+
+.appLabel {
+  display: none;
+  position: absolute;
+  top: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border-radius: 0.5rem;
+  background: var(--foreground-color);
+  z-index: 4;
+}
+
+.app:hover .appLabel {
+  display: flex;
+}
+
+/* Video */
+.card iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 0.75rem;
+}
+
+/* Web Apps */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 0.5rem;
+  padding: 0;
+  width: 100%;
+}
+.app-card-v2 {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  padding: 0.25rem 0.75rem 0.25rem 1rem;
+  align-items: left;
+  justify-content: center;
+
+  background: var(--foreground-color);
+  border-radius: 1rem;
+}
+.app-card-v2 > img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+}
+.app-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-grow: 1;
+  overflow: scroll;
+  text-wrap: nowrap;
+  
+  border-radius: 0.5rem;
+}
+.app-downloads {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-downloads svg {
+  height: 1.25rem;
+}
+
+@media (max-width: 35rem) {
+  .card iframe {
+    border-radius: 1rem;
+  }
+}
