@@ -1,3 +1,5 @@
+/* @import url('https://fonts.google.com/specimen/Comfortaa'); */
+
 :root {
   --background-color: white;
   --foreground-color: rgba(226, 226, 226, 0.6);
@@ -9,13 +11,12 @@
   --swirly-04: rgb(172, 189, 255);
 }
 
-@import url('https://fonts.google.com/specimen/Comfortaa');
-
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
+  padding: 0;
   
   background: var(--background-color);
   color: var(--text-color);
@@ -294,8 +295,8 @@ button:disabled {
     padding: 0.5rem;
   }
 
-  body {
-    padding: 0;
+  .content.spaced {
+    gap: 0.5rem;
   }
 
   .card {
