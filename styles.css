@@ -286,6 +286,14 @@ button:disabled {
 }
 
 @media (max-width: 35rem) {
+  .swirly-background {
+    overflow: hidden;
+  }
+
+  .contentView {
+    padding: 0.5rem;
+  }
+
   body {
     padding: 0;
   }
