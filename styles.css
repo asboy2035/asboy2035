@@ -15,6 +15,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
   
   background: var(--background-color);
   color: var(--text-color);
@@ -41,7 +42,6 @@ h1, h2, h3, h4, h5, h6, p {
 div {
   display: flex;
   flex-direction: column;
-  padding: 0.5rem;
   align-items: center;
   
   border-radius: 1rem;
@@ -247,10 +247,6 @@ button:disabled {
   transition: 0.2s ease-in-out;
 }
 
-.content {
-  padding: 0;
-}
-
 .grid {
   display: grid;
   width: 100%;
@@ -294,11 +290,16 @@ button:disabled {
     padding: 0;
   }
 
-  .contentView {
-    width: 100%;
-  }
-
   .card {
     padding: 1rem;
+    width: calc(100% - 2rem);
+  }
+
+  .grid.tight > .card {
+    width: calc(100% - 2rem);
+  }
+  .interior {
+    border-radius: 1rem;
+    padding: 0.75rem;
   }
 }
