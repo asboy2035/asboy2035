@@ -1,4 +1,8 @@
 /* Styles for apps pages */
+.hero {
+  height: 75vh;
+  justify-content: center;
+}
 
 .dock {
   position: fixed;
@@ -44,10 +48,9 @@
   display: flex;
 }
 
-/* Video */
-.card iframe {
+/* Images */
+.card img {
   width: 100%;
-  aspect-ratio: 16/9;
   border-radius: 0.75rem;
 }
 
@@ -105,5 +108,39 @@
 
   .hero {
     align-items: flex-start;
+  }
+}
+
+.updatedBadge {
+  position: relative;
+  border-radius: 10rem;
+  border: rgba(76, 0, 130, 0.4) 0.1rem solid;
+  background: var(--foreground-color);
+  padding: 0.75rem;
+  margin: 2rem 0;
+  animation: pulse 3s infinite ease-in-out;
+  z-index: 2;
+}
+.updatedBadge::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: blur(2rem);
+  background: indigo;
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
   }
 }
