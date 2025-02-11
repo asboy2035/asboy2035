@@ -144,3 +144,9 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 35rem) {
+  .hero {
+    height: fit-content;
+  }
+}

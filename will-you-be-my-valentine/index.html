@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Will u be my Valentine?</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <h1>Will you be my Valentine?</h1>
+  <div class="hStack">
+    <button id="yes" onclick="show('yay');" style="background: var(--accent);">
+      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="m9.55 15.15l8.475-8.475q.3-.3.7-.3t.7.3t.3.713t-.3.712l-9.175 9.2q-.3.3-.7.3t-.7-.3L4.55 13q-.3-.3-.288-.712t.313-.713t.713-.3t.712.3z"/></svg>
+      <p>Yes</p>
+    </button>
+    <button id="no" onclick="scalePadding('#yes');" style="background: var(--destructive);">
+      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M6.707 5.293a1 1 0 0 0-1.414 1.414L10.586 12l-5.293 5.293a1 1 0 1 0 1.414 1.414L12 13.414l5.293 5.293a1 1 0 0 0 1.414-1.414L13.414 12l5.293-5.293a1 1 0 0 0-1.414-1.414L12 10.586z"/></svg>
+      <p>No</p>
+    </button>
+  </div>
+  <p class="light"><a href="https://youtube.com/shorts/Gxbyc8nl3vQ">Original Idea</a></p>
+
+  <!-- Modal -->
+  <div id="yay" class="modal hidden">
+    <div>
+      <h2>Yay :D</h2>
+      <p><3</p>
+      <a href="https://asboy2035.pages.dev">
+        <button>Go to my website 🥺</button>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
