@@ -236,6 +236,11 @@ button:disabled {
   opacity: 0.5;
 }
 
+.hero {
+  height: 45vh;
+  justify-content: center;
+}
+
 #links {
   height: fit-content;
   flex-wrap: wrap;
@@ -286,6 +291,10 @@ button:disabled {
 }
 
 @media (max-width: 35rem) {
+  .hero {
+    height: fit-content;
+  }
+
   .swirly-background {
     overflow: hidden;
   }
