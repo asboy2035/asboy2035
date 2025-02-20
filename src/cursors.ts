@@ -2,6 +2,7 @@ export interface Cursor {
   name: string
   version: string
   destinationID: string
+  downloadURL: string
   assets: CursorAsset[]
 }
 
@@ -12,25 +13,26 @@ export interface CursorAsset {
 
 export const cursors: Cursor[] = [
   {
-    name: "test",
+    name: "Bibata Modern",
     version: "0",
-    destinationID: "cursor1",
+    destinationID: "bibataModern",
+    downloadURL: "./bibataModernAssets/ash.bibatamodern.cape",
     assets: [
       {
         type: "Pointer",
-        path: "/path/to/image.png"
-      }
-    ]
-  },
-
-  {
-    name: "test2",
-    version: "1",
-    destinationID: "cursor2",
-    assets: [
+        path: "./bibataModernAssets/Pointer.png"
+      },
       {
-        type: "Pointer",
-        path: "/path/image.png"
+        type: "Pointing",
+        path: "./bibataModernAssets/Pointing-Hand.png"
+      },
+      {
+        type: "Copy",
+        path: "./bibataModernAssets/Copy.png"
+      },
+      {
+        type: "Camera",
+        path: "./bibataModernAssets/Camera-v2.png"
       }
     ]
   }

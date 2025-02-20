@@ -1,0 +1,14 @@
+.cursor {
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.cursorAsset {
+  background: var(--foreground-color);
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.cursorAsset > img {
+  height: 3rem;
+}
