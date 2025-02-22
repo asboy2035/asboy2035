@@ -200,11 +200,7 @@ button:disabled {
   padding: 0;
 }
 
-.vStack.centered {
-  display: flex;
-  justify-content: center;
-}
-.hStack.centered {
+.centered {
   display: flex;
   align-items: center;
 }
