@@ -42,12 +42,6 @@
   display: flex;
 }
 
-/* Images */
-.card img {
-  width: 100%;
-  border-radius: 0.75rem;
-}
-
 /* Web Apps */
 .app-grid {
   display: grid;
