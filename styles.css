@@ -40,6 +40,10 @@ h1, h2, h3, h4, h5, h6, p {
 }
 h1, h2, h3 {
   margin-top: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+.profile h1 {
+  margin: 0;
 }
 
 div {
@@ -81,16 +85,19 @@ header {
   justify-content: space-between;
   align-items: center;
   
-  gap: 1rem;
+  gap: 0.35rem;
   background: var(--foreground-color);
   box-shadow: 0.5rem 0.5rem 3rem rgba(28, 28, 28, 0.2);
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 2rem;
   z-index: 3;
   backdrop-filter: blur(5rem);
 }
 
 a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: var(--text-color);
   cursor: pointer;
@@ -199,6 +206,9 @@ button:disabled {
 .edgeToEdge {
   padding: 0;
 }
+.tight {
+  gap: 0.25rem;
+}
 
 .centered {
   display: flex;
@@ -225,9 +235,9 @@ button:disabled {
 }
 
 @keyframes swirl {
-  0% { background-position: 0% 50%; }
+  0% { background-position: 0 50%; }
   50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  100% { background-position: 0 50%; }
 }
 
 .bottomMask {
@@ -251,15 +261,18 @@ button:disabled {
 .avatar, .navigationButton {
   width: 3rem;
   height: 3rem;
-  border-radius: 1rem;
+  border-radius: 50%;
   transition: 0.2s ease-in-out;
 }
-
 .navigationButton {
   padding: 0;
 }
 .navigationButton > svg {
   height: 2rem;
+}
+.bigAvatar {
+  width: 4rem !important;
+  height: 4rem !important;
 }
 
 .grid {
@@ -331,10 +344,6 @@ button:disabled {
     --swirly-02: rgb(20, 0, 26);
     --swirly-03: rgb(21, 0, 46);
     --swirly-04: rgb(0, 7, 36);
-  }
-
-  * {
-    box-shadow: none !important;
   }
 }
 
