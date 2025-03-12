@@ -1,6 +1,6 @@
 :root {
   --background-color: white;
-  --foreground-color: rgba(226, 226, 226, 0.6);
+  --foreground-color: rgba(226, 226, 226, 0.35);
   --text-color: black;
 
   --swirly-01: white;
@@ -61,6 +61,7 @@ div {
   padding: 1.5rem;
   background: var(--foreground-color);
   box-shadow: 0.5rem 0.5rem 3rem rgba(28, 28, 28, 0.2);
+  backdrop-filter: saturate(150%);
 }
 a .card {
   width: calc(100% - 1.5rem);
@@ -91,7 +92,7 @@ header {
   padding: 0.5rem;
   border-radius: 2rem;
   z-index: 3;
-  backdrop-filter: blur(5rem);
+  backdrop-filter: blur(5rem) saturate(150%);
 }
 
 a {
@@ -115,7 +116,7 @@ svg {
 
 /* Images */
 .card img {
-  width: 100%;
+  max-width: 100%;
   border-radius: 0.75rem;
 }
 
@@ -134,7 +135,7 @@ button {
   padding: 0.5rem 0.75rem;
   cursor: pointer;
   transition: 0.2s ease-in-out;
-  backdrop-filter: blur(2rem);
+  backdrop-filter: blur(2rem) saturate(150%);
 }
 button:hover:not(:disabled), .avatar:hover {
   transform: scale(1.1);
@@ -249,6 +250,7 @@ button:disabled {
   height: 4rem;
   
   background: linear-gradient(to top, var(--background-color), transparent);
+  opacity: 0.75;
   border-radius: 0;
   z-index: 2;
 }
@@ -285,7 +287,7 @@ button:disabled {
   display: inline-flex;
 }
 .grid.tight {
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
   width: 100%;
 }
 .grid.tight > .card {
@@ -337,7 +339,7 @@ button:disabled {
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: black;
-    --foreground-color: rgba(45, 45, 45, 0.6);
+    --foreground-color: rgba(45, 45, 45, 0.35);
     --text-color: rgb(240, 240, 240);
 
     --swirly-01: black;
