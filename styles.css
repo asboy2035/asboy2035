@@ -1,3 +1,4 @@
+/*Color palette*/
 :root {
   --background-color: white;
   --foreground-color: rgba(226, 226, 226, 0.35);
@@ -7,6 +8,19 @@
   --swirly-02: rgb(242, 178, 227);
   --swirly-03: rgb(204, 163, 255);
   --swirly-04: rgb(172, 189, 255);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: black;
+    --foreground-color: rgba(45, 45, 45, 0.35);
+    --text-color: rgb(240, 240, 240);
+
+    --swirly-01: black;
+    --swirly-02: rgb(20, 0, 26);
+    --swirly-03: rgb(21, 0, 46);
+    --swirly-04: rgb(0, 7, 36);
+  }
 }
 
 body {
@@ -27,12 +41,52 @@ body {
 .contentView {
   display: flex;
   flex-direction: column;
-  padding: 3rem 1rem;
-  justify-self: center;
-  width: 100vw;
+  width: 100%;
   max-width: 55rem;
   min-height: 100vh;
+  padding: 3rem 1rem;
   gap: 1rem;
+}
+
+.navigationView > .contentView {
+  padding: 0 !important;
+}
+
+.navigationView {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100vw;
+  max-width: 80rem;
+  padding: 3rem 1rem;
+  gap: 1rem;
+}
+
+.sidebarView {
+  display: none;
+  width: 20rem;
+}
+
+.sidebarModeOnly {
+  display: none;
+}
+
+.stackModeOnly {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 80rem) {
+  .sidebarView, .sidebarModeOnly {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stackModeOnly {
+    display: none;
+  }
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -55,21 +109,42 @@ div {
 }
 
 .card {
+  position: relative;
   width: calc(100% - 3rem);
   align-items: flex-start;
   border-radius: 2rem;
   padding: 1.5rem;
   background: var(--foreground-color);
-  box-shadow: 0.5rem 0.5rem 3rem rgba(28, 28, 28, 0.2);
-  backdrop-filter: saturate(150%);
+  z-index: 1;
 }
 a .card {
   width: calc(100% - 1.5rem);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0.5rem;
+
+  opacity: 0.4;
+  background: radial-gradient(circle at top left, var(--swirly-01), var(--swirly-02), var(--swirly-03), var(--swirly-04));
+  z-index: -1;
+  filter: blur(1rem);
+  transition: 0.2s ease;
+}
+.card:hover::before {
+  opacity: 0.9;
 }
 
 .interior {
   border-radius: 0.75rem;
   padding: 0.75rem;
+}
+.interior::before {
+  display: none;
 }
 
 ul {
@@ -92,7 +167,7 @@ header {
   padding: 0.5rem;
   border-radius: 2rem;
   z-index: 3;
-  backdrop-filter: blur(5rem) saturate(150%);
+  backdrop-filter: blur(2rem);
 }
 
 a {
@@ -222,25 +297,6 @@ button:disabled {
   width: 100%;
 }
 
-.swirly-background {
-  border-radius: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  background: linear-gradient(120deg, var(--swirly-01), var(--swirly-02), var(--swirly-03), var(--swirly-04));
-  background-size: 300% 300%;
-  animation: swirl 15s infinite ease-in-out;
-}
-
-@keyframes swirl {
-  0% { background-position: 0 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0 50%; }
-}
-
 .bottomMask {
   position: fixed;
   bottom: 0;
@@ -336,19 +392,6 @@ button:disabled {
   z-index: -1;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: black;
-    --foreground-color: rgba(45, 45, 45, 0.35);
-    --text-color: rgb(240, 240, 240);
-
-    --swirly-01: black;
-    --swirly-02: rgb(20, 0, 26);
-    --swirly-03: rgb(21, 0, 46);
-    --swirly-04: rgb(0, 7, 36);
-  }
-}
-
 @media (max-width: 35rem) {
   .hero {
     height: fit-content;
@@ -363,7 +406,7 @@ button:disabled {
     overflow: hidden;
   }
 
-  .contentView {
+  .navigationView, .contentView {
     padding: 0.75rem;
   }
 

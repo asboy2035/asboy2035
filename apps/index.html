@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../styles.css">
   <link rel="stylesheet" href="./styles.css">
+  <script src="AppSetRenderer.js" defer></script>
 
   <meta property="og:title" content="ash's Apps">
   <meta property="og:description" content="My apps ;)">
@@ -16,7 +17,6 @@
 </head>
 <body>
   <h1 class="hidden">Your CSS is disabled!</h1>
-  <div class="swirly-background"></div>
   <div class="bottomMask"></div>
   <div class="contentView">
     <!-- Hero -->
@@ -26,125 +26,18 @@
       <div class="spacer"></div>
 
       <p>I make apps for web or Mac occasionally.</p>
+      <a href="https://github.com/asboy2035?tab=repositories">
+        <button>
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M7.024 2.31a9 9 0 0 1 2.125 1.046A11.4 11.4 0 0 1 12 3c.993 0 1.951.124 2.849.355a9 9 0 0 1 2.124-1.045c.697-.237 1.69-.621 2.28.032c.4.444.5 1.188.571 1.756c.08.634.099 1.46-.111 2.28C20.516 7.415 21 8.652 21 10c0 2.042-1.106 3.815-2.743 5.043a9.5 9.5 0 0 1-2.59 1.356c.214.49.333 1.032.333 1.601v3a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-.991c-.955.117-1.756.013-2.437-.276c-.712-.302-1.208-.77-1.581-1.218c-.354-.424-.74-1.38-1.298-1.566a1 1 0 0 1 .632-1.898c.666.222 1.1.702 1.397 1.088c.48.62.87 1.43 1.63 1.753c.313.133.772.22 1.49.122L8 17.98a4 4 0 0 1 .333-1.581a9.5 9.5 0 0 1-2.59-1.356C4.106 13.815 3 12.043 3 10c0-1.346.483-2.582 1.284-3.618c-.21-.82-.192-1.648-.112-2.283l.005-.038c.073-.582.158-1.267.566-1.719c.59-.653 1.584-.268 2.28-.031Z"/></g></svg>
+          GitHub Repos
+        </button>
+      </a>
     </div>
 
-    <!-- Web apps -->
-     <div class="card">
-      <h2>My (Fav) Web Apps</h2>
-
-      <div class="app-grid">
-        <div class="app-card-v2">
-          <img src="https://tewfa.pages.dev/assets/icon-1024.png" alt="tewFA Logo">
-          <div class="app-details">
-            <h3>tewFA</h3>
-            <p class="light">A simple and modern 2FA app.</p>
-          </div>
-          <div class="app-downloads">
-            <a href="https://tewfa.pages.dev/">
-              <button>Go</button>
-            </a>
-
-            <a href="https://github.com/tewFA/tewFA">
-              <button class="transparent">
-                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none"><path d="M0 0h24v24H0z"/><path fill="currentColor" d="M14.486 3.143a1 1 0 0 1 .692 1.233l-4.43 15.788a1 1 0 0 1-1.926-.54l4.43-15.788a1 1 0 0 1 1.234-.693M7.207 7.05a1 1 0 0 1 0 1.414L3.672 12l3.535 3.535a1 1 0 1 1-1.414 1.415L1.55 12.707a1 1 0 0 1 0-1.414L5.793 7.05a1 1 0 0 1 1.414 0m9.586 1.414a1 1 0 1 1 1.414-1.414l4.243 4.243a1 1 0 0 1 0 1.414l-4.243 4.243a1 1 0 0 1-1.414-1.415L20.328 12z"/></g></svg>
-              </button>
-            </a>
-          </div>
-        </div>
-  
-        <div class="app-card-v2">
-          <img src="https://clocs.pages.dev/Icons/Icon.png" alt="clocs Logo">
-          <div class="app-details">
-            <h3>Clocs</h3>
-            <p class="light">Keep track of everyone's time.</p>
-          </div>
-          <div class="app-downloads">
-            <a href="https://clocs.pages.dev/">
-              <button>Go</button>
-            </a>
-
-            <a href="https://github.com/asboy2035/Clocs/">
-              <button class="transparent">
-                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none"><path d="M0 0h24v24H0z"/><path fill="currentColor" d="M14.486 3.143a1 1 0 0 1 .692 1.233l-4.43 15.788a1 1 0 0 1-1.926-.54l4.43-15.788a1 1 0 0 1 1.234-.693M7.207 7.05a1 1 0 0 1 0 1.414L3.672 12l3.535 3.535a1 1 0 1 1-1.414 1.415L1.55 12.707a1 1 0 0 1 0-1.414L5.793 7.05a1 1 0 0 1 1.414 0m9.586 1.414a1 1 0 1 1 1.414-1.414l4.243 4.243a1 1 0 0 1 0 1.414l-4.243 4.243a1 1 0 0 1-1.414-1.415L20.328 12z"/></g></svg>
-              </button>
-            </a>
-          </div>
-        </div>
-  
-        <div class="app-card-v2">
-          <img src="https://ashtronomy.pages.dev/Images/Astronomy-Icon.png" alt="Hydration Logo">
-          <div class="app-details">
-            <h3>Astronomer</h3>
-            <p class="light">An app with all the planets :)</p>
-          </div>
-          <div class="app-downloads">
-            <a href="https://ashtronomy.pages.dev/">
-              <button>Go</button>
-            </a>
-
-            <a href="https://github.com/asboy2035/Astronomy/">
-              <button class="transparent">
-                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none"><path d="M0 0h24v24H0z"/><path fill="currentColor" d="M14.486 3.143a1 1 0 0 1 .692 1.233l-4.43 15.788a1 1 0 0 1-1.926-.54l4.43-15.788a1 1 0 0 1 1.234-.693M7.207 7.05a1 1 0 0 1 0 1.414L3.672 12l3.535 3.535a1 1 0 1 1-1.414 1.415L1.55 12.707a1 1 0 0 1 0-1.414L5.793 7.05a1 1 0 0 1 1.414 0m9.586 1.414a1 1 0 1 1 1.414-1.414l4.243 4.243a1 1 0 0 1 0 1.414l-4.243 4.243a1 1 0 0 1-1.414-1.415L20.328 12z"/></g></svg>
-              </button>
-            </a>
-          </div>
-        </div>
-  
-        <div class="app-card-v2">
-          <img src="https://byteforge-site-3-3.byteforge.pages.dev/Images/Vault-Icon.jpeg" alt="ByteForge Logo">
-          <div class="app-details">
-            <h3>Vault</h3>
-            <p class="light">A private space for your ideas.</p>
-  
-          </div>
-          <div class="app-downloads">
-            <a href="/vault/">
-              <button>Go</button>
-            </a>
-
-            <a href="https://github.com/ByteForgeProd/ByteSite/tree/byteforge-site-3.3/vault/">
-              <button class="transparent">
-                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none"><path d="M0 0h24v24H0z"/><path fill="currentColor" d="M14.486 3.143a1 1 0 0 1 .692 1.233l-4.43 15.788a1 1 0 0 1-1.926-.54l4.43-15.788a1 1 0 0 1 1.234-.693M7.207 7.05a1 1 0 0 1 0 1.414L3.672 12l3.535 3.535a1 1 0 1 1-1.414 1.415L1.55 12.707a1 1 0 0 1 0-1.414L5.793 7.05a1 1 0 0 1 1.414 0m9.586 1.414a1 1 0 1 1 1.414-1.414l4.243 4.243a1 1 0 0 1 0 1.414l-4.243 4.243a1 1 0 0 1-1.414-1.415L20.328 12z"/></g></svg>
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
+    <div id="appsContainer" class="vStack" style="width: 100%">
+<!--      Apps are dynamically loaded-->
     </div>
-    <p class="light">How to install PWAs (iOS): Click/press "Go" and then "Share" then "Add to Home Screen".</p>
 
-    <!-- Mac apps -->
-    <div class="card">
-      <h2>My Apps</h2>
-
-      <div class="app-grid">
-        <div class="app-card-v2">
-          <img src="./icons/Stand-Icon.png" alt="Stand Logo">
-          <div class="app-details">
-            <h3>Stand</h3>
-            <p class="light">A Mac app for standing desks.</p>
-          </div>
-          <div class="app-downloads">
-            <a href="./stand.html">
-              <button>Learn More</button>
-            </a>
-          </div>
-        </div>
-
-        <div class="app-card-v2">
-          <img src="./icons/BigTime-Icon.png" alt="BigTime Logo">
-          <div class="app-details">
-            <h3>BigTime</h3>
-            <p class="light">A minimal macOS time tracker.</p>
-          </div>
-          <div class="app-downloads">
-<!--            <a href="./stand.html">-->
-              <button disabled>Soon</button>
-<!--            </a>-->
-          </div>
-        </div>
-      </div>
-    </div>
     <header>
       <!-- Profile -->
       <div class="profile transparent hStack">
