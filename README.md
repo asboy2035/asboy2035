@@ -1,16 +1,22 @@
-## Hi there 👋
+# hai haiii ✨
+**i'm ash!** – web designer, shortcut hacker, and macOS app enjoyer 🍎✨
+#### [say hi to my site](https://asboy2035.com)
 
-<!--
-**asboy2035/asboy2035** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=asboy2035&theme=tokyonight&layout=compact&hide_border=true" alt="Top Langs" />
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## what i do
+- make cute, clean web stuff 🌐
+- automate *everything* with shortcuts ⚡
+- code quirky lil mac apps when i’m bored 🎯
+
+---
+
+## pronouns & names
+**he/they** preferred — but honestly, call me whatever kind 💖
+
+nicknames i vibe with:
+- ashie  
+- asher  
+- ashy
