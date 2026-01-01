@@ -1,4 +1,8 @@
-this is my personal account. for all my org repos, go [here](https://github.com/studio2035)!
+this is my personal account.
+### orgs
+- [main35](https://github.com/main35) - main org
+- [apps35](https://github.com/apps35) - apps org
+
 
 # hai haiii ✨
 **i'm ash!** - web designer, shortcut hacker, and macOS app enjoyer.
