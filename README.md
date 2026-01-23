@@ -2,6 +2,7 @@ this is my personal account.
 ### orgs
 - [main35](https://github.com/main35) - main org
 - [apps35](https://github.com/apps35) - apps org
+- [starters35](https://github.com/starters35) - templates org
 
 
 # hai haiii ✨
